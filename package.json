@@ -1,6 +1,6 @@
 {
   "name": "vite-react-starter",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "homepage": "https://kiran-sm.github.io/capace_noteTakingApp",
   "type": "module",
