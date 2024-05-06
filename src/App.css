@@ -1,42 +1,92 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+
+.App {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.note-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+.note-item:hover {
+  background-color: #f0f0f0;
 }
 
-.read-the-docs {
-  color: #888;
+.note-item.selected {
+  background-color: #e0e0e0;
+}
+
+.note-item h3 {
+  margin-top: 0;
+}
+
+.note-editor {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.note-editor form {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-editor input,
+.note-editor textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.note-editor button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.note-editor button:hover {
+  background-color: #0056b3;
+}
+
+.sidebar {
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar button {
+  padding: 8px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #218838;
+}
+
+.search {
+  margin-bottom: 20px;
+}
+
+.search input {
+  padding: 8px;
+  width: 100%;
 }
