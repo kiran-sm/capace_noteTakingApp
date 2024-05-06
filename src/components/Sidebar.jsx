@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Sidebar({ addNote }) {
   const handleAddNote = () => {
     addNote({
       id: new Date().getTime(),
-      title: '',
-      content: '',
+      title: "",
+      content: "",
     });
   };
 
